@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>template 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header">
+        <h1>this is template 2.</h1>
+    </div>
+
+    <hr>
+
+    <div id="main">
+            <h1>this page allows you to select a different image each time</h1>
+            <button id="button">shuffle</button>
+            <img id="my_image" class="img" src="./Images/1.jfif" style="width: 800px; height: 800px">
+            <img src="./Images/" alt="">
+            <script>
+                let first = "./Images/1.jfif";
+                let second = "./Images/2.jpg";
+                let third = "./Images/3.jpg";
+                let fourth = "./Images/4.jpg";
+                let fifth = "./Images/5.jfif";
+
+                document.getElementById("button").onclick = function () {
+                    let img = document.getElementById("my_image");
+                    let path;
+
+                    var randomNum = Math.floor(Math.random() * 5) + 1;
+
+                    switch(randomNum) {
+                        case 1:
+                            path = first;
+                            break;
+                        case 2:
+                            path = second;
+                            break;
+                        case 3:
+                            path = third;
+                            break;
+                        case 4:
+                            path = fourth;
+                            break;
+                        case 5:
+                            path = fifth;
+                            break;
+                    }
+
+                    img.src = path;
+                    
+                }
+            </script>
+    </div>
+
+    <div id="footer">
+        <p>this is the footer</p>
+        <a href="./index.t2.html">click here to go to page/index 2</a><br>
+        <a href="./index.t3.html">click here to go to page/index 3</a>
+    </div>
+    
+</body>
+</html>
